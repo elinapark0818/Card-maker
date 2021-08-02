@@ -1,5 +1,3 @@
-@value makerPink from './common/colors.css';
-
 body {
   background-color: makerPink;
   margin: 0;

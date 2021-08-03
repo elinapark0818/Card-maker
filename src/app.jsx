@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Maker from './components/maker/maker';
 
 
-const App = ({ authService}) => {
+function App({ authService}) {
   return (
     <div className={styles.app}>
       <BrowserRouter>
@@ -20,10 +20,7 @@ const App = ({ authService}) => {
         </Switch>
       </BrowserRouter>
     </div>
-  )
+  );
 }
-
-
-
 
 export default App;

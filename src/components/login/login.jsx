@@ -10,7 +10,7 @@ const Login = ({authService}) => {
   const goToMaker = userId => {
     history.push({
       pathName: '/maker',
-      state: {id: userId}
+      state: {id: userId},
     });
   };
 
@@ -39,7 +39,7 @@ const Login = ({authService}) => {
         </section>
       <Footer/>
     </section>
-  )
-}
+  );
+};
 
 export default Login;

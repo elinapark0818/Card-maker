@@ -5,25 +5,23 @@ import Header from '../header/header';
 import { useHistory } from 'react-router-dom';
 
 const Login = ({authService}) => {
-
   const history = useHistory();
   const goToMaker = userId => {
     history.push({
-      pathName: '/maker',
+      pathname: '/maker',
       state: {id: userId},
     });
   };
 
   const onLogin = event => {
     authService
-    .login(event.currentTarget.textContent)
-    .then(data => goToMaker(data.user.uid));
+      .login(event.currentTarget.textContent)
+      .then(data => goToMaker(data.user.uid));
   };
 
   useEffect(() => {
-    authService
-    .onAuthChange(user => {
-      user && goToMaker(user.uid);
+    authService.onAuthChange(user => {
+      user && goToMaker(user.id);
     });
   });
 

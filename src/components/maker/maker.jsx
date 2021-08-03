@@ -5,9 +5,7 @@ import Header from '../header/header';
 import styles from './maker.module.css';
 
 const Maker = ({authService}) => {
-
   const history = useHistory();
-  
   const onLogout = () => {
     authService.logout();
   };

@@ -1,5 +1,8 @@
 .editor {
   flex-basis: 50%;
-  color: blue;
   background-color: wheat;
+}
+
+.title {
+  color: blue;
 }

@@ -1,5 +1,8 @@
 .preview {
   flex-basis: 50%;
-  color: red;
   background-color: pink;
+}
+
+.title {
+  color: red;
 }

@@ -1,8 +1,8 @@
 {
   "workbench.colorCustomizations": {
-  
     "titleBar.activeBackground": "#3F708D",
     "titleBar.inactiveBackground": "#3F708D"
   },
-  "editor.fontSize": 12
+  "editor.fontSize": 12,
+  "git.ignoreLimitWarning": true
 }

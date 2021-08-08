@@ -10,7 +10,6 @@ const Card = ({ card }) => {
     title, 
     email, 
     message, 
-    fileName, 
     fileURL,
   } = card;
 
@@ -18,7 +17,7 @@ const Card = ({ card }) => {
 
   return (
     <li className={`${styles.card} ${getStyles(theme)}`}>
-      <img className={styles.avatar} src={url} alt="profile_img" />
+      <img className={styles.avatar} src={url} alt="profile" />
       <div className={styles.info}>
         <h1 className={styles.name}>{name}</h1>
         <p className={styles.company}>{company}</p>

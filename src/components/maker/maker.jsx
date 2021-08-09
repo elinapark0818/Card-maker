@@ -7,12 +7,12 @@ import Preview from '../preview/preview';
 import styles from './maker.module.css';
 
 const Maker = ({ authService, FileInput, cardRepository }) => {
-  const history = useHistory();
-  const historyState = history?.location?.state;
+  const historyState = useHistory().state;
+  // const historyState = history?.location?.state;
   const [cards, setCards] = useState({});
   const [userId, setUserId] = useState(historyState && historyState.id);
   
-
+  const history = useHistory();
   const onLogout = useCallback(() => {
     authService.logout();
   }, [authService]);
@@ -35,7 +35,7 @@ const Maker = ({ authService, FileInput, cardRepository }) => {
         history.push('/');
       }
     });
-  }, [history, authService]);
+  }, [authService, userId, history]);
 
   // const addCard = card => {
   //   const updated = [...cards, card];
@@ -68,19 +68,17 @@ const Maker = ({ authService, FileInput, cardRepository }) => {
       <Header onLogout={onLogout}/>
       <div className={styles.container}>
         <Editor 
-        FileInput={FileInput}
-        cards={cards} 
-        addCard={createOrUpdateCard}
-        updateCard={createOrUpdateCard}
-        deleteCard={deleteCard}
+          FileInput={FileInput}
+          cards={cards} 
+          addCard={createOrUpdateCard}
+          updateCard={createOrUpdateCard}
+          deleteCard={deleteCard}
         />
         <Preview cards={cards}/>
-
       </div>
       <Footer />
     </section>
   )
-
 };
 
 

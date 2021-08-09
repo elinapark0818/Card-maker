@@ -31,8 +31,16 @@ const Login = ({authService}) => {
         <section>
           <h1>Login</h1>
           <ul className={styles.list}>
-            <li className={styles.item}><button className={styles.button} onClick={onLogin}>Google</button></li>
-            <li className={styles.item}><button className={styles.button} onClick={onLogin}>Github</button></li>
+            <li className={styles.item}>
+              <button className={styles.button} onClick={onLogin}>
+                Google
+              </button>
+            </li>
+            <li className={styles.item}>
+              <button className={styles.button} onClick={onLogin}>
+                Github
+              </button>
+            </li>
           </ul>
         </section>
       <Footer/>

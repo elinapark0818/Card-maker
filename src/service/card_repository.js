@@ -9,13 +9,12 @@ class CardRepository {
     });
     return () => ref.off();
   }
-
   saveCard(userId, card) {
-    firebaseDatabase.ref(`${userId}/card/${card.id}`).set(card);
+    firebaseDatabase.ref(`${userId}/cards/${card.id}`).set(card);
   }
-  
+
   removeCard(userId, card) {
-    firebaseDatabase.ref(`${userId}/card/${card.id}`).remove();
+    firebaseDatabase.ref(`${userId}/cards/${card.id}`).remove();
   }
 }
 

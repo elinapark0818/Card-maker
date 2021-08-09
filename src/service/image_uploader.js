@@ -13,4 +13,5 @@ class ImageUploader {
     return await result.json();
   }
 }
+
 export default ImageUploader;

@@ -24,10 +24,9 @@ class AuthService {
       case 'Github':
         return githubProvider;
       default:
-        throw new Error(`not surpported provider: ${providerName}`)
+        throw new Error(`not surpported provider: ${providerName}`);
     }
   }
-
 }
 
 export default AuthService;

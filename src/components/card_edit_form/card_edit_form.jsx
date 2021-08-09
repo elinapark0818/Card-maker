@@ -102,7 +102,7 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
         </div>
         <Button name='Delete' onClick={onSubmit}/>
       </form>
-  )
-}
+  );
+};
 
 export default CardEditForm;

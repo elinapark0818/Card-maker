@@ -40,8 +40,7 @@ const onChange = event => {
   });
 };
 
-const onSubmit = (event) => {
-  event.preventDefault();
+const onSubmit = () => {
   deleteCard(card);
 };
 

@@ -87,8 +87,8 @@ const CardAddForm = memo(({ FileInput, onAdd }) => {
         className={styles.textarea} 
         name="message" 
         placeholder='Message'
-        >
-        </textarea>
+        />
+        
         <div className={styles.fileInput}>
           <FileInput name={file.fileName} onFileChange={onFileChange} />
         </div>

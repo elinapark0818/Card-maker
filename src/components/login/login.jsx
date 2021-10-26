@@ -4,17 +4,17 @@ import Footer from '../footer/footer';
 import Header from '../header/header';
 import { useHistory } from 'react-router-dom';
 
-const Login = ({authService}) => {
+const Login = ({ authService }) => {
   const history = useHistory();
   const goToMaker = userId => {
     history.push({
       pathname: '/maker',
-      state: {id: userId},
+      state: { id: userId },
     });
   };
 
   const onLogin = event => {
-    authService
+    authService //
       .login(event.currentTarget.textContent)
       .then(data => goToMaker(data.user.uid));
   };
@@ -27,23 +27,23 @@ const Login = ({authService}) => {
 
   return (
     <section className={styles.login}>
-      <Header/>
-        <section>
-          <h1>Login</h1>
-          <ul className={styles.list}>
-            <li className={styles.item}>
-              <button className={styles.button} onClick={onLogin}>
-                Google
-              </button>
-            </li>
-            <li className={styles.item}>
-              <button className={styles.button} onClick={onLogin}>
-                Github
-              </button>
-            </li>
-          </ul>
-        </section>
-      <Footer/>
+      <Header />
+      <section>
+        <h1>Login</h1>
+        <ul className={styles.list}>
+          <li className={styles.item}>
+            <button className={styles.button} onClick={onLogin}>
+              Google
+            </button>
+          </li>
+          <li className={styles.item}>
+            <button className={styles.button} onClick={onLogin}>
+              Github
+            </button>
+          </li>
+        </ul>
+      </section>
+      <Footer />
     </section>
   );
 };
